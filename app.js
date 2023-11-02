@@ -48,8 +48,8 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     getRandomHexColor();
   }
-  if (e.keyCode === 123) {
-    return false;
+if (e.keyCode === 123) {
+    e.preventDefault()
   }
 });
   
