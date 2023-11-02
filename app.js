@@ -41,11 +41,19 @@ btnOver.addEventListener("mouseover", () => {
   getRandomHexColor();
 });
 
-inputColor.addEventListener("input", (e) => {
-  result(e.target.value);
-});
-
 copySup.addEventListener("click", () => {
   navigator.clipboard.writeText(inputColor.value); // Kullanıcıyı uyrabilmek için async yapı kullanmamız gerekiyor. Şuan için ona gerek yok
 });
-
+document.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    getRandomHexColor();
+  }
+ if(e.key === "f12"){
+  return false;
+ }
+});
+  
+  
+inputColor.addEventListener("input", (e) => {
+  result(e.target.value);
+})
