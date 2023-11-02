@@ -41,6 +41,10 @@ btnOver.addEventListener("mouseover", () => {
   getRandomHexColor();
 });
 
+inputColor.addEventListener("input", (e) => {
+  result(e.target.value);
+});
+
 copySup.addEventListener("click", () => {
   navigator.clipboard.writeText(inputColor.value); // Kullanıcıyı uyrabilmek için async yapı kullanmamız gerekiyor. Şuan için ona gerek yok
 });
