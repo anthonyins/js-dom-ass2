@@ -48,7 +48,7 @@ document.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     getRandomHexColor();
   }
- if(e.key === "f12"){
+ if(e.keyCode === 123){
   return false;
  }
 });
