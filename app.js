@@ -44,15 +44,14 @@ btnOver.addEventListener("mouseover", () => {
 copySup.addEventListener("click", () => {
   navigator.clipboard.writeText(inputColor.value); // Kullanıcıyı uyrabilmek için async yapı kullanmamız gerekiyor. Şuan için ona gerek yok
 });
-document.addEventListener("keyup", (e) => {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     getRandomHexColor();
   }
- if(e.keyCode === 123){
-  return false;
- }
+  if (e.keyCode === 123) {
+    return false;
+  }
 });
-  
   
 inputColor.addEventListener("input", (e) => {
   result(e.target.value);
